@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konverter Suhu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Konversi Suhu Online</h1>
+        </header>
+        <!-- Form untuk input suhu dan memilih jenis konversi -->
+        <form id="temperature-form">
+            <label for="temperature">Suhu (°C atau °F)</label>
+            <input type="number" id="temperature" name="temperature" placeholder="Masukkan suhu">
+            
+            <!-- Dropdown untuk memilih jenis konversi -->
+            <select id="conversion-type">
+                <option value="toFahrenheit">Konversi dari Celcius ke Fahrenheit</option>
+                <option value="toCelsius">Konversi dari Fahrenheit ke Celsius</option>
+            </select>
+            
+            <!-- Tombol untuk memulai konversi dan reset form -->
+            <button type="button" onclick="convertTemperature()">Konversi</button>
+            <button type="reset">Reset</button>
+        </form>
+        
+        <!-- Div untuk menampilkan hasil konversi -->
+        <div id="result"></div>
+        
+        <!-- Div untuk menampilkan penjelasan dari perhitungan -->
+        <div id="explanation"></div>
+        
+        <!-- Section untuk menampilkan informasi tambahan tentang rumus konversi -->
+        <section class="conversion-info">
+            <h2>Penjelasan Perhitungan Konversi Suhu</h2>
+            <p><strong>Rumus Konversi dari Celsius ke Fahrenheit:</strong></p>
+            <p>F = (C × 9/5) + 32</p>
+            <p><strong>Rumus Konversi dari Fahrenheit ke Celsius:</strong></p>
+            <p>C = (F - 32) × 5/9</p>
+        </section>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
